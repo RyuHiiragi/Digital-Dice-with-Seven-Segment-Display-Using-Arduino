@@ -42,11 +42,35 @@ These dimensions ensure that the system is compact yet spacious enough to house 
 ---
 
 ## Assembly Instructions
-Follow these steps to assemble your digital dice:
-1. Connect the seven-segment display to the Arduino using 220Ω resistors for each segment.
-2. Connect the push button to the Arduino for triggering random number generation.
-3. Power the system using a USB cable.
-4. Secure all components inside a protective enclosure.
+Follow these detailed steps to assemble your digital dice:
+
+1. **Prepare the Seven-Segment Display**
+   - Connect the seven-segment display to the Arduino using the following pin configuration:
+     - **Segment a** → Digital Pin 2
+     - **Segment b** → Digital Pin 3
+     - **Segment c** → Digital Pin 4
+     - **Segment d** → Digital Pin 5
+     - **Segment e** → Digital Pin 6
+     - **Segment f** → Digital Pin 7
+     - **Segment g** → Digital Pin 8
+   - Use 220Ω resistors in series with each segment to limit current. For example, connect one end of a resistor to Digital Pin 2 and the other end to the "a" segment of the display. Repeat this process for all segments (a–g) <button class="citation-flag" data-index="7">.
+
+2. **Connect the Common Pin of the Seven-Segment Display**
+   - If using a **common cathode** display, connect the common pin (usually labeled as "COM") to the GND pin on the Arduino.
+   - If using a **common anode** display, connect the common pin to the 5V pin on the Arduino <button class="citation-flag" data-index="7">.
+
+3. **Connect the Push Button**
+   - Connect one terminal of the push button to the 5V pin on the Arduino.
+   - Connect the other terminal to Digital Pin 9 on the Arduino.
+   - Add a 10kΩ pull-down resistor between Digital Pin 9 and GND to ensure stable input readings <button class="citation-flag" data-index="3">.
+
+4. **Power Connections**
+   - Power the system using a USB cable connected to the Arduino's power input. Ensure the USB cable provides sufficient power (5V).
+
+5. **Final Assembly**
+   - Secure all components inside a protective enclosure.
+   - Position the seven-segment display and push button for easy access.
+   - Double-check all connections to ensure there are no loose wires or incorrect pin assignments.
 
 ---
 
